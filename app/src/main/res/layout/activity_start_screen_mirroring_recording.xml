@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_70dp"
+        android:layout_marginStart="@dimen/_45dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:translationZ="@dimen/_60dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60dp"
+            android:layout_marginLeft="@dimen/_2dp"
+            android:src="@drawable/school_logo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/_5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/gps_tracker_back"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_8dp"
+            android:src="@drawable/ic_left_arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_70dp"
+            android:layout_marginLeft="@dimen/_90dp"
+            android:layout_toEndOf="@+id/gps_tracker_back"
+            android:layout_toRightOf="@+id/gps_tracker_back"
+            android:includeFontPadding="false"
+            android:text="WOW Mirroring Recording App"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+
+        <!--   <androidx.appcompat.widget.AppCompatImageView
+               android:layout_width="51dp"
+               android:layout_height="match_parent"
+               android:layout_marginStart="@dimen/_5dp"
+               android:layout_marginLeft="@dimen/_2dp"
+               android:layout_toRightOf="@+id/gps_tracker_back"
+               android:background="@color/red" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_below="@+id/rl_header"
+        android:background="@color/colorGray"
+        android:elevation="@dimen/_5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title_name8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Start Mirroring - WOW Screen Function"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_header1">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpaper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/appbarLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fab_rec"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/viewpaper"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rec_button"
+            android:contentDescription="REC"
+            android:gravity="center"
+            android:text="REC"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/viewpaper"
+            app:layout_constraintEnd_toEndOf="@id/viewpaper" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                style="@style/Widget.MaterialComponents.TabLayout.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabGravity="fill"
+                app:tabIconTint="@android:color/white"
+                app:tabMode="fixed" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

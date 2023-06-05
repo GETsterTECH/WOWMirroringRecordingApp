@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:androidx="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.androidx.com/tools"
+    tools:showIn="navigation_view">
+    <group androidx:checkableBehavior="single">
+        <item
+            androidx:id="@+id/bluetooth_remote"
+            androidx:title="Bluetooth Remote" />
+
+        <item
+            androidx:id="@+id/link_to_WOW_screens"
+            androidx:title="Link to WOW Screen/s" />
+
+        <item
+            androidx:id="@+id/start_screen_mirroring_recording"
+            androidx:title="Start Screen Mirroring - Recording" />
+    </group>
+
+</menu>

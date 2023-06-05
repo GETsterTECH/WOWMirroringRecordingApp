@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--    Recording App -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.requestLegacyExternalStorage=&quot;true&quot;" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.bluetooth_le" />
+    <uses-feature android:name="android.software.companion_device_setup" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+
+    <application
+        android:name=".screenrecording.App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WOWMirroringRecordingApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".activity.StartScreenMirroringRecording"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+<!--                <data android:scheme="@string/fb_login_protocol_scheme" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <service
+            android:name=".bluetoothservice.BluetoothHidService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
+
+        <activity
+            android:name=".activity.LinkToWOWScreens"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BluetoothRemote"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HomePage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SaveMobileDeviceID"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FaceLogin"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginPage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RegisteredMobileNumber"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SelectYourRegisteredBusiness"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name=".bluetoothservice.BluetoothTileService"
+            android:exported="true"
+            android:icon="@drawable/remote_control"
+            android:label="Bluetooth Remote"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".bluetoothservice.NotificationBroadcastReceiver" />
+
+        <!--   Recording  -->
+
+        <activity
+            android:name=".screenrecording.ui.activities.StreamingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+
+        <activity
+            android:name=".screenrecording.ui.activities.SyncActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:parentActivityName=".StartScreenMirroringRecording">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreenMirroringRecording" />
+        </activity>
+
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <receiver
+            android:name=".screenrecording.ui.activities.SyncActivity$NetworkChangeReceiver"
+            android:exported="false"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".screenrecording.ui.services.BaseService"
+            android:enabled="true"
+            android:exported="false"></service>
+        <service
+            android:name=".screenrecording.ui.services.recording.RecordingControllerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".screenrecording.ui.services.recording.RecordingService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
+
+        <service
+            android:name=".screenrecording.ui.services.sync.SyncService"
+            android:exported="false" />
+
+        <service
+            android:name=".screenrecording.ui.services.ControllerService"
+            android:exported="false" />
+
+        <!--    end    -->
+    </application>
+
+</manifest>

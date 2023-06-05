@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#003791</color>
+    <color name="purple_500">#3366ff</color>
+    <color name="purple_700">#3366ff</color>
+    <color name="teal_200">#0257A3</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#3366ff</color>
+    <color name="colorPrimaryDark">#3366ff</color>
+    <color name="colorAccent">#9a9a9a</color>
+
+    <!--    <color name="purple_200">#f6c160</color>-->
+    <!--    <color name="purple_500">#f5b949</color>-->
+    <!--    <color name="purple_700">#f3b033</color>-->
+    <!--    <color name="teal_200">#FF03DAC5</color>-->
+    <!--    <color name="teal_700">#FF018786</color>-->
+    <!--    <color name="black">#FF000000</color>-->
+    <!--    <color name="white">#FFFFFFFF</color>-->
+
+    <!--    <color name="colorPrimary">#f2a61c</color>-->
+    <!--    <color name="colorPrimaryDark">#f2a61c</color>-->
+    <!--    <color name="colorAccent">#f2a61c</color>-->
+
+    <color name="transparent_black">#99000000</color>
+    <color name="transparent_white">#AAFFFFFF</color>
+
+    <color name="notification_card_bg">#EFEFEF</color>
+
+    <color name="headColor">#505050</color>
+    <color name="tableHead">#f2c001</color>
+
+    <color name="login_bg">#F7F8FA</color>
+    <color name="light_gray">#C6C6C6</color>
+    <color name="skeleton">#dddddd</color>
+    <color name="translucent_black">#F2292928</color>
+    <color name="hint_color">#A6000000</color>
+    <color name="blue">#3B5999</color>
+    <color name="orange">#FF5C00</color>
+    <color name="darker_gray">#C4C4C4</color>
+    <color name="light_orange">#ff7e33</color>
+    <color name="trasparant">#00000000</color>
+    <color name="textcolor">#BEC2CE</color>
+    <color name="otp_bg">#F7F8FA</color>
+    <color name="gender_bg">#F2F2F2</color>
+    <color name="text_color_1">#999999</color>
+    <color name="black90opc">#1A000000</color>
+    <color name="time_color">#A8B6C8</color>
+    <color name="feed_color">#323B45</color>
+    <color name="disable_button">#1F000000</color>
+    <color name="text_gray">#666666</color>
+    <color name="black_cc">#CC000000</color>
+    <color name="fun_button">#454545</color>
+    <color name="green">#10B134</color>
+    <color name="dark_red">#E8550B</color>
+    <color name="red">#FF0000</color>
+    <color name="store_bg">#C4C4C4</color>
+    <color name="fun_bg">#1E2029</color>
+    <color name="event_bg">#E5E5E5</color>
+    <color name="white_85">#000000</color>
+    <color name="colorGray">#9a9a9a</color>
+
+    <item name="gray_holo_dark" type="color">#ff464646</item>
+    <item name="gray_holo_light" type="color">#ffd0d0d0</item>
+
+    <!--    Recording   -->
+    <color name="trans">#000000</color>
+    <color name="color_facebook">#3366ff</color>
+    <color name="block_ui">#850C0A0A</color>
+    <!-- end -->
+</resources>

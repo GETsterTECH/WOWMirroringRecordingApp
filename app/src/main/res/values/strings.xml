@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name">WOWMirroringRecordingApp</string>
+    <string name="flash_on">Flash [ON]</string>
+    <string name="flash_off">Flash [OFF]</string>
+    <string name="auto_focus_on">Auto Focus [ON]</string>
+    <string name="auto_focus_off">Auto Focus [OFF]</string>
+    <string name="formats">Formats</string>
+    <string name="choose_formats">Choose Formats</string>
+    <string name="select_camera">Select a Camera</string>
+    <string name="ok_button">OK</string>
+    <string name="Login">Login</string>
+    <string name="Register">Register</string>
+    <string name="Save">Save</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="bluetooth_remote">Bluetooth Remote</string>
+
+
+    <bool name="cameraPreviewShouldFillView">true</bool>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="no_internet">Oops, your connection seems off..Please try after connecting to a network</string>
+
+    <string name="error_valid_password">Password length should be more than or equal to 8 characters</string>
+
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="option_symptoms_prompt">Cough</string>
+    <string-array name="option_symptoms_arrays">
+        <item>Unknown</item>
+        <item>Present</item>
+        <item>Intermittent</item>
+    </string-array>
+
+    <string name="option_comorbidities_prompt">Investigations</string>
+    <string-array name="option_comorbidities_arrays">
+        <item>Unknown</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string name="option_investigations_prompt">Investigations</string>
+    <string-array name="option_investigations_arrays">
+        <item>NotDone</item>
+        <item>Done</item>
+    </string-array>
+
+    <string name="option_examination_prompt">Investigations</string>
+    <string-array name="option_examination_arrays">
+        <item>NotDone</item>
+        <item>Done</item>
+        <item>Unknown</item>
+    </string-array>
+
+    <!--  FAQ  -->
+
+    <string name="text_alcohol">What is UMANG?</string>
+    <string name="text_coffee">What is the aim of UMANG?</string>
+    <string name="text_pasta">How will UMANG achieve its aim?</string>
+    <string name="text_cold_drinks">How can I login on UMANG?</string>
+    <string name="text_expanded">How can I access UMANG?</string>
+    <string name="text_collapsed">Collapsed</string>
+    <string-array name="string_array_alcohol">
+        <item>Unified Mobile Application for New-age Governance (UMANG), a Digital India initiative of Ministry of Electronics and Information Technology (MeitY) refers to the multiple government services being made accessible to you through UMANG mobile App, Website, SMS short code, and UMANG toll free IVR.</item>
+    </string-array>
+    <string-array name="string_array_coffee">
+        <item>Espresso</item>
+        <item>Macchiato</item>
+        <item>Cappuccino</item>
+        <item>Cafe Latte</item>
+        <item>Ristretto</item>
+    </string-array>
+    <string-array name="string_array_pasta">
+        <item>Carbonara</item>
+        <item>Capellini</item>
+        <item>Spaghetti</item>
+        <item>Gnocchi</item>
+        <item>Lasagnette</item>
+    </string-array>
+    <string-array name="string_array_cold_drinks">
+        <item>Cola</item>
+        <item>Lemonade</item>
+        <item>Citrus soda</item>
+        <item>Juice</item>
+        <item>Sparkling Water</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="btn_left">◀️</string>
+    <string name="btn_right">▶️</string>
+    <string name="btn_up">🔼</string>
+    <string name="btn_down">🔽</string>
+    <string name="btn_middle">⏺️</string>
+
+    <string name="btn_back">🔙</string>
+    <string name="btn_home">🏠</string>
+    <string name="btn_power">📴</string>
+    <string name="btn_mute">🔇</string>
+    <string name="btn_menu">☰</string>
+    <string name="btn_gear">⚙️</string>
+    <string name="btn_vol_up">🔊</string>
+    <string name="btn_vol_down">🔉</string>
+    <string name="btn_play_pause">⏯️</string>
+    <string name="btn_rewind">⏪</string>
+    <string name="btn_forward">⏩</string>
+
+
+    <string name="btn_forward1">▶</string>
+
+    <string name="play_pause">Play/Pause</string>
+    <string name="vol_inc">Vol+</string>
+    <string name="vol_dec">Vol-</string>
+
+
+    <!--    Recordings-->
+    <string name="facebook_app_id">636414803521202</string>
+    <string name="fb_login_protocol_scheme">fb636414803521202</string>
+
+    <!--Video settings-->
+    <string name="setting_video_bitrate">setting_video_bitrate</string>
+    <string name="setting_video_resolution">setting_video_resolution</string>
+    <string name="setting_video_fps">setting_video_fps</string>
+
+    <!--Camera settings-->
+    <string name="setting_camera_mode">setting_camera_mode</string>
+    <string name="setting_camera_position">setting_camera_position</string>
+    <string name="setting_camera_size">setting_camera_size</string>
+
+    <!--Audio settings-->
+    <string name="setting_audio_source">setting_audio_source</string>
+
+
+    <!--Common Setting-->
+    <string name="setting_common_orientation">setting_common_orientation</string>
+    <string name="setting_common_countdown">setting_common_countdown</string>
+
+    <!--Default setting-->
+    <string name="default_setting_resolution">Default</string>
+    <string name="default_setting_bitrate">-1</string>
+    <string name="default_setting_fps">30</string>
+    <string name="default_setting_countdown">3</string>
+    <string name="default_setting_orientation">Auto</string>
+    <string name="default_camera_mode">Front</string>
+    <string name="default_camera_position">Bottom Right</string>
+    <string name="default_camera_size">Medium</string>
+    <string name="default_audio_source">Microphone</string>
+    <string name="file_created">File created</string>
+    <string name="file_create_error">File create error</string>
+    <string name="pref_drive_folderId">pref_drive_folderId</string>
+    <!-- end -->
+
+</resources>
